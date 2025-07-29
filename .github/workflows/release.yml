@@ -92,7 +92,7 @@ jobs:
   # Second job: Build and deploy to PyPI
   deploy:
     name: Deploy to PyPI
-    needs: test
+    # needs: test  # Commented out since test job is disabled
     runs-on: ubuntu-latest
     if: startsWith(github.ref, 'refs/tags/v')
     
@@ -139,14 +139,17 @@ jobs:
 
     - name: Update version in package files
       run: |
+        # Update version in pyproject.toml
+        sed -i "s/version = .*/version = \"${{ steps.get_version.outputs.VERSION }}\"/" pyproject.toml
+        
         # Update version in __init__.py
-        sed -i "s/__version__ = .*/__version__ = \"${{ steps.get_version.outputs.VERSION }}\"/" src/llm_exo_graph/__init__.py
+        sed -i "s/__version__ = .*/__version__ = \"${{ steps.get_version.outputs.VERSION }}\"/" src/exo_graph/__init__.py
         
         # Verify the version was updated
         python -c "
         import sys
         sys.path.insert(0, 'src')
-        from llm_exo_graph import __version__
+        from exo_graph import __version__
         expected = '${{ steps.get_version.outputs.VERSION }}'
         if __version__ != expected:
             print(f'Version mismatch: got {__version__}, expected {expected}')
@@ -169,7 +172,7 @@ jobs:
       run: |
         # Test that the built package can be installed
         pip install dist/*.whl
-        python -c "import llm_exo_graph; print(f'Successfully imported llm_exo_graph v{llm_exo_graph.__version__}')"
+        python -c "import exo_graph; print(f'Successfully imported exo_graph v{exo_graph.__version__}')"
 
     - name: Publish to Test PyPI first
       env:
@@ -248,7 +251,7 @@ jobs:
   # Third job: Notify on failure
   notify-failure:
     name: Notify on Failure
-    needs: [test, deploy]
+    needs: [deploy]  # Removed test dependency since it's disabled
     runs-on: ubuntu-latest
     if: failure()
     

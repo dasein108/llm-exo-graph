@@ -15,7 +15,8 @@ dependencies = [
     "numpy>=1.21.0",
     "python-dotenv>=0.19.0",
     "scikit-learn>=1.0.0",
-    "scipy>=1.7.0"
+    "scipy>=1.7.0",
+    "json-repair==0.48.0"
 ]
 keywords = [
     "knowledge-graph", "neo4j", "llm", "openai", "semantic-search",
@@ -60,16 +61,12 @@ documents = [
     "pypdf>=3.17.0",
     "langchain-community>=0.3.27",
     "unstructured==0.18.11",
-    "json_repair==0.48.0"
 ]
-docs = [
-    "mkdocs>=1.5.0",
-    "mkdocs-material>=9.0.0"
-]
+
 all = [
     "pytest>=7.0.0", "pytest-cov>=4.0.0", "black>=22.0.0", "flake8>=5.0.0", "mypy>=0.991", "pre-commit>=2.20.0",
     "fastapi>=0.104.0", "uvicorn>=0.24.0", "pydantic>=2.0.0",
-    "langchain>=0.0.350", "pypdf>=3.17.0", "langchain-community>=0.3.27", "unstructured==0.18.11", "json_repair==0.48.0",
+    "langchain>=0.0.350", "pypdf>=3.17.0", "langchain-community>=0.3.27", "unstructured==0.18.11",
     "mkdocs>=1.5.0", "mkdocs-material>=9.0.0"
 ]
 
@@ -86,8 +83,6 @@ Repository = "https://github.com/dasein108/llm-exo-graph.git"
 Issues = "https://github.com/dasein108/llm-exo-graph/issues"
 Documentation = "https://github.com/dasein108/llm-exo-graph/docs"
 Source = "https://github.com/dasein108/llm-exo-graph/"
-"Bug Tracker" = "https://github.com/dasein108/llm-exo-graph/issues"
-"API Reference" = "https://github.com/dasein108/llm-exo-graph/blob/main/API_Reference.md"
 
 [tool.black]
 line-length = 100

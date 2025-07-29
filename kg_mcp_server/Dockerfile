@@ -13,13 +13,13 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy the KG Engine package files (context is parent directory)
-COPY setup.py /kg_engine/setup.py
+COPY pyproject.toml /kg_engine/pyproject.toml
 COPY src /kg_engine/src
 COPY README.md /kg_engine/README.md
 
-# Install KG Engine
+# Install KG Engine with document processing dependencies
 WORKDIR /kg_engine
-RUN pip install --no-cache-dir -e .
+RUN pip install --no-cache-dir -e ".[documents]"
 
 # Switch back to app directory
 WORKDIR /app

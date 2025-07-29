@@ -149,8 +149,8 @@ curl http://localhost:3000/sse
 # Clean rebuild (from parent directory)
 cd .. && docker build --no-cache -f kg_mcp_server/Dockerfile -t kg-mcp-server .
 
-# Check parent directory has setup.py
-ls setup.py src/
+# Check parent directory has pyproject.toml
+ls pyproject.toml src/
 ```
 
 ## Management Commands

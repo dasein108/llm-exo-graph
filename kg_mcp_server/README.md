@@ -305,8 +305,8 @@ print(f"Server status: {response.status_code}")
    # Clean build with no cache (run from parent directory)
    cd .. && docker build --no-cache -f kg_mcp_server/Dockerfile -t kg-mcp-server .
    
-   # Check if setup.py exists in parent directory
-   ls setup.py src/
+   # Check if pyproject.toml exists in parent directory
+   ls pyproject.toml src/
    ```
 
 ### Quick Diagnosis
