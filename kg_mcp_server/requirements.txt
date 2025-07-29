@@ -8,6 +8,6 @@ python-dotenv>=1.0.0
 structlog>=23.1.0
 pydantic>=2.0.0
 uvicorn>=0.23.0
-# kg-engine-v2==2.3.0
-# KG Engine (install from parent directory)
+llm-exo-graph
+# Exo Graph Engine (install from parent directory)
 # pip install -e ..

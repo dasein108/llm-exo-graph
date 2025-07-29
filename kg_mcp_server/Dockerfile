@@ -12,14 +12,15 @@ RUN apt-get update && apt-get install -y \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
+# USE package from pypi
 # Copy the KG Engine package files (context is parent directory)
-COPY pyproject.toml /kg_engine/pyproject.toml
-COPY src /kg_engine/src
-COPY README.md /kg_engine/README.md
-
+# COPY pyproject.toml /kg_engine/pyproject.toml
+# COPY src /kg_engine/src
+# COPY README.md /kg_engine/README.md
+#
 # Install KG Engine with document processing dependencies
-WORKDIR /kg_engine
-RUN pip install --no-cache-dir -e ".[documents]"
+# WORKDIR /kg_engine
+# RUN pip install --no-cache-dir -e ".[documents]"
 
 # Switch back to app directory
 WORKDIR /app
@@ -33,8 +34,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Create non-root user for security
 RUN useradd --create-home --shell /bin/bash mcp && \
-    chown -R mcp:mcp /app && \
-    chown -R mcp:mcp /kg_engine
+    chown -R mcp:mcp /app
 USER mcp
 
 # Set environment variables (non-sensitive defaults only)
@@ -43,7 +43,7 @@ ENV PYTHONUNBUFFERED=1
 ENV NEO4J_URI=bolt://localhost:7687
 ENV NEO4J_USERNAME=neo4j
 ENV NEO4J_DATABASE=neo4j
-ENV OPENAI_MODEL=gpt-4o-mini
+ENV OPENAI_MODEL=gpt-4o
 
 # Expose port
 EXPOSE 3000

@@ -19,7 +19,4 @@ httpx>=0.25.0
 
 # Environment management
 python-dotenv>=1.0.0
-
-# KG Engine Package (install separately)
-# Run: pip install -e ../  (from kg_api_server directory)
-# Or: pip install kg-engine-v2  (if published to PyPI)
+llm-exo-graph
