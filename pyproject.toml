@@ -16,7 +16,7 @@ dependencies = [
     "python-dotenv>=0.19.0",
     "scikit-learn>=1.0.0",
     "scipy>=1.7.0",
-    "json-repair==0.48.0"
+    "json-repair>=0.44.0"
 ]
 keywords = [
     "knowledge-graph", "neo4j", "llm", "openai", "semantic-search",
