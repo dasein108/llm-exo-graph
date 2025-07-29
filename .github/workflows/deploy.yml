@@ -45,8 +45,8 @@ jobs:
             export NEO4J_USERNAME="${{ secrets.NEO4J_USERNAME }}"
             export NEO4J_PASSWORD="${{ secrets.NEO4J_PASSWORD }}"
             export NEO4J_DATABASE="${{ secrets.NEO4J_DATABASE }}"
-            export LLM_BASE_URL="${{ secrets.LLM_BASE_URL }}"
-            export LLM_BEARER_KEY="${{ secrets.LLM_BEARER_KEY }}"
+            export LITELLM_BASE_URL="${{ secrets.LITELLM_BASE_URL }}"
+            export LITELLM_BEARER_TOKEN="${{ secrets.LITELLM_BEARER_TOKEN }}"
             export OPENAI_MODEL="${{ secrets.OPENAI_MODEL }}"
             export GHCR_PAT="${{ secrets.GHCR_PAT }}"
             export GHCR_USER="${{ env.GHCR_USER }}"
@@ -76,9 +76,9 @@ jobs:
                 -e NEO4J_USERNAME="'$NEO4J_USERNAME'" \
                 -e NEO4J_PASSWORD="'$NEO4J_PASSWORD'" \
                 -e NEO4J_DATABASE="'$NEO4J_DATABASE'" \
-                -e LLM_BASE_URL="'$LLM_BASE_URL'" \
-                -e LLM_BEARER_KEY="'$LLM_BEARER_KEY'" \
-                -e OPENAI_MODEL="'$OPENAI_MODEL'" \
+                -e LITELLM_BASE_URL="'$LITELLM_BASE_URL'" \
+                -e LITELLM_BEARER_TOKEN="'$LITELLM_BEARER_TOKEN'" \
+                -e LITELLM_MODEL="'$LITELLM_MODEL'" \
                 -e LOG_LEVEL="INFO" \
                 '$IMAGE_REPO'/'$CONTAINER_NAME':'$IMAGE_TAG'
             '
