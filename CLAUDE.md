@@ -18,7 +18,7 @@
 
 ### Technology Stack
 - **Database**: Neo4j 5.x (graph + vector storage)
-- **Language**: Python 3.8+
+- **Language**: Python 3.10+
 - **Embeddings**: Sentence Transformers (all-MiniLM-L6-v2)
 - **LLM**: OpenAI/Ollama/LiteLLM with factory-based configuration
 - **Document Processing**: LangChain with PDF/text/HTML loaders
@@ -203,7 +203,7 @@ After **ai tag** is processed - remove it
 
 ## 🚀 Getting Started
 
-1. **Prerequisites**: Python 3.8+, Neo4j 5.x
+1. **Prerequisites**: Python 3.10+, Neo4j 5.x
 2. **Installation**: `pip install -e .`
 3. **Configuration**: Set up `.env` with Neo4j credentials
 4. **Quick Test**: `python examples.py`

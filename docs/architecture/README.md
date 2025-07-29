@@ -66,7 +66,7 @@ graph TB
 ## 📊 Technology Stack
 
 - **Database**: Neo4j 5.x
-- **Language**: Python 3.8+
+- **Language**: Python 3.10+
 - **Vector Embeddings**: Sentence Transformers
 - **LLM Integration**: OpenAI API / Ollama
 - **Query Language**: Cypher

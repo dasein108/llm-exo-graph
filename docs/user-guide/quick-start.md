@@ -14,7 +14,7 @@ Get up and running with Knowledge Graph Engine v2 in just a few minutes.
 
 Before you begin, ensure you have:
 
-- **Python 3.8+** installed
+- **Python 3.10+** installed
 - **Neo4j 5.x** running (local or remote)
 - **OpenAI API key** (optional, for LLM features)
 

@@ -1,7 +1,7 @@
 # LLM Exo-Graph 🧠🕸️
 
 [![PyPI version](https://badge.fury.io/py/llm-exo-graph.svg)](https://pypi.org/project/llm-exo-graph/)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 An advanced knowledge graph engine that externalizes LLM memory into Neo4j, creating a persistent, searchable brain for AI systems.

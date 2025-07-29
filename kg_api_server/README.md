@@ -6,7 +6,7 @@ A standalone FastAPI application that demonstrates how to use the `kg_engine` pa
 
 ### Prerequisites
 
-- Python 3.8+
+- Python 3.10+
 - Neo4j 5.x running locally or remotely
 - OpenAI API key (optional, for LLM features)
 

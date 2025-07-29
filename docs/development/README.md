@@ -19,7 +19,7 @@ Performance optimization guidelines, profiling, and benchmarking.
 ## 🛠️ Development Environment
 
 ### Prerequisites
-- **Python 3.8+** with pip
+- **Python 3.10+** with pip
 - **Neo4j 5.x** running locally or accessible remotely
 - **Git** for version control
 - **Optional**: Docker for containerized development

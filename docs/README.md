@@ -48,7 +48,7 @@ Welcome to the comprehensive documentation for Knowledge Graph Engine v2, a mode
 
 ## 📊 System Requirements
 
-- **Python**: 3.8 or higher
+- **Python**: 3.10 or higher
 - **Neo4j**: 5.0 or higher
 - **Memory**: 4GB RAM minimum, 8GB recommended
 - **Storage**: Varies by dataset size

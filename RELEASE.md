@@ -105,7 +105,7 @@ After pushing the tag:
 
 2. **Expected Workflow Steps:**
    ```
-   ✅ Test Suite (Python 3.8, 3.9, 3.10, 3.11)
+   ✅ Test Suite (Python 3.10, 3.11, 3.12)
    ✅ Deploy to PyPI
    ✅ Create GitHub Release
    ```
@@ -177,8 +177,8 @@ git push origin "v1.2.4"
 pytest tests/ -v --tb=short
 
 # Check specific Python version issues
-python3.8 -m pytest tests/
-python3.9 -m pytest tests/
+python3.10 -m pytest tests/
+python3.11 -m pytest tests/
 ```
 
 **4. Version Mismatch**

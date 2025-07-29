@@ -8,7 +8,7 @@ The `visualize_graph.py` script generates comprehensive visualizations of your N
 
 ## Prerequisites
 
-- Python 3.8+
+- Python 3.10+
 - Active Neo4j database with graph data
 - Required Python packages:
   ```bash
