@@ -5,10 +5,22 @@ on:
     workflows: ["Build MCP Server Docker Image"]
     types:
       - completed
+  workflow_dispatch:
+    inputs:
+      image_tag:
+        description: 'Docker image tag to deploy'
+        required: false
+        default: 'main'
+        type: string
+      force_restart:
+        description: 'Force container restart even if same image'
+        required: false
+        default: false
+        type: boolean
 
 env:
   CONTAINER_NAME: kg-mcp-server
-  IMAGE_TAG: main
+  IMAGE_TAG: ${{ github.event.inputs.image_tag || 'main' }}
   IMAGE_REPO: ghcr.io/dasein108/llm-exo-graph
   GHCR_USER: dasein108
 
