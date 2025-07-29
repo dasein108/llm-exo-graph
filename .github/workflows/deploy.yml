@@ -47,7 +47,7 @@ jobs:
             export NEO4J_DATABASE="${{ secrets.NEO4J_DATABASE }}"
             export LITELLM_BASE_URL="${{ secrets.LITELLM_BASE_URL }}"
             export LITELLM_BEARER_TOKEN="${{ secrets.LITELLM_BEARER_TOKEN }}"
-            export OPENAI_MODEL="${{ secrets.OPENAI_MODEL }}"
+            export LITELLM_MODEL="${{ secrets.OPENAI_MODEL }}"
             export GHCR_PAT="${{ secrets.GHCR_PAT }}"
             export GHCR_USER="${{ env.GHCR_USER }}"
 
