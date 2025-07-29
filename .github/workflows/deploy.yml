@@ -65,7 +65,6 @@ jobs:
               docker rmi '$IMAGE_REPO'/'$CONTAINER_NAME':'$IMAGE_TAG' || true
 
               echo "Pulling latest image..."
-              echo "${GHCR_PAT}" | docker login ghcr.io -u <your-username> --password-stdin
               docker pull '$IMAGE_REPO'/'$CONTAINER_NAME':'$IMAGE_TAG'
 
               echo "Starting new container..."
