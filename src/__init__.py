@@ -7,7 +7,7 @@ from exo_graph import (
     ExtractedInfo, ParsedQuery
 )
 
-__version__ = "2.1.0"
+__version__ = "1.1.1"
 __all__ = [
     "ExoGraphEngine",
     "InputItem",

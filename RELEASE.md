@@ -68,9 +68,8 @@ mypy src/llm_exo_graph
 **Create Release Tag:**
 ```bash
 # Choose your version number (following semantic versioning)
-NEW_VERSION="1.2.3"  # Replace with your version
+NEW_VERSION="1.2.3"
 
-# Create and push the tag
 git tag -a "v${NEW_VERSION}" -m "Release version ${NEW_VERSION}"
 git push origin "v${NEW_VERSION}"
 ```
