@@ -9,7 +9,7 @@ on:
 env:
   CONTAINER_NAME: kg-mcp-server
   IMAGE_TAG: main
-  IMAGE_REPO: ghcr.io/dasein108/kg_semantic
+  IMAGE_REPO: ghcr.io/dasein108/llm-exo-graph
   GHCR_USER: dasein108
 
 jobs:
